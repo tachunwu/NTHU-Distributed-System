@@ -1,13 +1,13 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion:
+kind:
 metadata:
-  name: comment-api
+  name:
 spec:
-  replicas: 2
+  replicas:
   template:
     spec:
       containers:
-      - name: comment-api
+      - name:
         image: ghcr.io/nthu-lsalab/nthu-distributed-system:latest
         imagePullPolicy: Always
         ports:
@@ -16,9 +16,6 @@ spec:
         - name: prometheus
           containerPort: 2222
         command:
-        - /cmd
-        - comment
-        - api
         env:
         - name: METER_HISTOGRAM_BOUNDARIES
           value: 10,100,200,500,1000

@@ -1,9 +1,9 @@
-apiVersion: v1
-kind: Service
+apiVersion:
+kind:
 metadata:
-  name: comment-api
+  name:
 spec:
-  type: ClusterIP
+  type:
   ports:
   - name: grpc
     port: 8081
